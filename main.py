@@ -21,9 +21,12 @@ def FtoC (F):
         print("Invalid Value")
 
 
-temperature = int(input('Enter your temperature in Celsius: '))
 user = int(input("1 for CtoF, 2 for FtoC: "))
+temperature = int(input('Enter your temperature in Celsius: '))
 if user == 1:
            print(CtoF(temperature))
 elif user == 2:
-           print(FtoC(temperature))
+    if (FtoC(temperature)) >= -273.15:
+        print(FtoC(temperature))
+    elif (FtoC(temperature)) <= -273.15:
+               print("Invalid Value")
